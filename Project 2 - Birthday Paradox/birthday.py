@@ -41,7 +41,8 @@ while i <= no_sims:
     print("running simulation", i)
     print()
     max_value,count=simulation()
-    sim_check[max_value]=count
+    if (count > 1):
+        sim_check[max_value]=count
     i=i+1;
 
 sim_check_values = sim_check.values()
