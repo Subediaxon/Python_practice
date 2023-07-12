@@ -16,19 +16,21 @@ every starting number eventually terminates at 1.
  
 response = int(input('Enter a starting number (greater than 0) or QUIT:'))
 try:
+    
     if (response == 0):
         print('You must enter an integer greater than 0.')
     elif (response > 0):    
+        print(response, end="," )  
         while (response != 1):
-            print(response, end="," )
             if (response%2==0):
                 response = int(response/2)
-                print(response, end="," )
+                #print(response, end="," )
             
             else:
                 response = int((response * 3) + 1)
-                print(response, end=",");
                 sleep(0.2);
+            print(response, end=",");
+                
     else:
         print("Thank you!!")
 except:
