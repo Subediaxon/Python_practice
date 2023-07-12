@@ -14,9 +14,8 @@ It is generally thought, but so far not mathematically proven, that
 every starting number eventually terminates at 1.
 ''')
  
-response = input('Enter a starting number (greater than 0) or QUIT:')
-
-if (isinstance(response, numbers.Number)):
+response = int(input('Enter a starting number (greater than 0) or QUIT:'))
+try:
     if (response == 0):
         print('You must enter an integer greater than 0.')
     elif (response > 0):    
@@ -24,12 +23,13 @@ if (isinstance(response, numbers.Number)):
             print(response, end="," )
             if (response%2==0):
                 response = int(response/2)
-                
+                print(response, end="," )
+            
             else:
                 response = int((response * 3) + 1)
-                #print(response, end=",");
+                print(response, end=",");
                 sleep(0.2);
     else:
         print("Thank you!!")
-else:
+except:
     print("You did not enter a Number")
