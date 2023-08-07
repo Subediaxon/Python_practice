@@ -47,7 +47,7 @@ while i <= no_sims:
 
 sim_check_values = sim_check.values()
 total_repeat = sum(sim_check_values)
-avg_percent =(total_repeat/no_sims)*100
+avg_percent =round(total_repeat/(no_sims*no_bdays)*100,3)
 
 print("Out of", no_sims,"simulations of", no_bdays,"people, there was a matching birthday in that group", total_repeat,"times.")
 print("This means that", no_bdays, "people have a", avg_percent,"% chance of having a matching birthday in their group.")
